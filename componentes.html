@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guía de componentes · MiCarro al Día</title>
+  <meta name="description" content="Paleta, tipografía y sábana de controles de MiCarro al Día web.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/guia.css">
+</head>
+<body>
+  <main class="guide">
+    <header class="guide-header">
+      <p class="overline">MiCarro al Día · Web</p>
+      <h1 class="title-1">Guía de componentes</h1>
+      <p class="support">Paleta, tipografía y sábana de controles del Figma. Todas las pantallas usan estas clases de <code>css/styles.css</code>.</p>
+    </header>
+
+    <!-- Paleta y tipografía -->
+    <div class="guide-grid">
+      <section class="guide-section">
+        <h2>Paleta de colores</h2>
+        <div class="swatches">
+          <div class="swatch"><span style="background: var(--color-navy)"></span><code>#0F172A</code><small>--color-navy</small></div>
+          <div class="swatch"><span style="background: var(--color-blue)"></span><code>#2563EB</code><small>--color-blue</small></div>
+          <div class="swatch"><span style="background: var(--color-green)"></span><code>#10B981</code><small>--color-green</small></div>
+          <div class="swatch"><span style="background: var(--color-bg)"></span><code>#F8FAFC</code><small>--color-bg</small></div>
+        </div>
+      </section>
+
+      <section class="guide-section">
+        <h2>Tipografía</h2>
+        <div class="card card-body type-sample">
+          <p class="support">Plus Jakarta Sans</p>
+          <p class="type-aa">Aa Bb Cc</p>
+          <p class="title-1">Título 1</p>
+          <p class="heading">Texto de encabezado</p>
+          <p class="support">Texto de apoyo</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Sábana de controles -->
+    <div class="guide-grid">
+      <div class="guide-column">
+        <section class="guide-section">
+          <h2>Botones</h2>
+          <div class="guide-row">
+            <button type="button" class="btn btn-primary">Botón</button>
+            <button type="button" class="btn btn-secondary">Botón</button>
+            <button type="button" class="btn btn-ghost">Botón</button>
+          </div>
+        </section>
+
+        <section class="guide-section">
+          <h2>Grupo de botones</h2>
+          <div class="btn-group" role="group" aria-label="Ejemplo de grupo">
+            <button type="button" class="btn" aria-pressed="false">Botón</button>
+            <button type="button" class="btn" aria-pressed="true">Botón</button>
+          </div>
+        </section>
+
+        <section class="guide-section">
+          <h2>Cuadro de notificaciones</h2>
+          <div class="modal-box guide-static-box">
+            <button type="button" class="btn-close" aria-label="Cerrar"><span class="icon" data-icon="x"></span></button>
+            <div class="notice">
+              <span class="notice-icon"><span class="icon" data-icon="info"></span></span>
+              <div>
+                <h3>Se ha enviado un correo de confirmación para restablecer tu contraseña</h3>
+                <p>Por favor verifique la bandeja de entrada de su correo o spam.</p>
+                <button type="button" class="btn btn-secondary btn-sm">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="guide-section">
+          <h2>Botón cerrar</h2>
+          <button type="button" class="btn-close" aria-label="Cerrar"><span class="icon" data-icon="x"></span></button>
+        </section>
+
+        <section class="guide-section">
+          <h2>Breadcrumb</h2>
+          <nav aria-label="Ruta">
+            <ol class="breadcrumb">
+              <li><a href="#">Panel principal</a></li>
+              <li><span aria-current="page">Estado de las obligaciones</span></li>
+            </ol>
+          </nav>
+        </section>
+      </div>
+
+      <div class="guide-column">
+        <section class="guide-section">
+          <h2>Formulario de recuperar contraseña</h2>
+          <form class="modal-box guide-static-box" novalidate>
+            <button type="button" class="btn-close" aria-label="Cerrar"><span class="icon" data-icon="x"></span></button>
+            <h3 class="modal-title">Recuperar contraseña</h3>
+            <p class="modal-text">Ingresa el correo electrónico asociado a tu cuenta vehicular y te enviaremos un enlace seguro para restablecer tu contraseña.</p>
+            <div class="field">
+              <label class="field-label" for="demo-email">Correo electrónico registrado</label>
+              <div class="input-wrap input-wrap--outline">
+                <span class="icon" data-icon="mail"></span>
+                <input id="demo-email" type="email" placeholder="ejemplo@correo.com">
+              </div>
+            </div>
+            <div class="modal-actions">
+              <button type="button" class="btn btn-ghost">Cancelar</button>
+              <button type="button" class="btn btn-primary">Enviar correo de recuperación <span class="icon" data-icon="arrow-right"></span></button>
+            </div>
+            <p class="modal-footer">¿Tienes problemas para acceder? <a class="link" href="#">Contactar a soporte técnico</a></p>
+          </form>
+        </section>
+
+        <section class="guide-section">
+          <h2>Modal de pago</h2>
+          <form class="modal-box guide-static-box" novalidate>
+            <button type="button" class="btn-close" aria-label="Cerrar"><span class="icon" data-icon="x"></span></button>
+            <h3 class="modal-title modal-title--left">Pagar obligación</h3>
+
+            <div class="detail-block">
+              <p class="overline">Detalle de la obligación</p>
+              <div class="detail-row">Tipo de obligación <b>SOAT</b></div>
+              <div class="detail-row">Fecha de vencimiento <b>15/10/2026</b></div>
+              <div class="detail-row">Placa del vehículo <span class="plate">KLR·892</span></div>
+            </div>
+            <div class="detail-block">
+              <p class="overline">Detalle del precio</p>
+              <div class="detail-row">Valor base <b>$980.000</b></div>
+              <div class="detail-row">Impuestos <b>$45.000</b></div>
+              <div class="detail-row detail-row--discount">Descuento <b>-$98.000</b></div>
+              <div class="detail-total">Total a pagar <b>$927.000</b></div>
+            </div>
+
+            <div class="field guide-spaced">
+              <label class="field-label" for="demo-pay">Medio de pago</label>
+              <div class="input-wrap input-wrap--outline">
+                <span class="pay-badge">PSE</span>
+                <select id="demo-pay">
+                  <option>PSE (Débito desde cuenta de ahorros)</option>
+                  <option>Tarjeta de crédito</option>
+                </select>
+                <span class="icon" data-icon="chevron-down"></span>
+              </div>
+            </div>
+
+            <div class="modal-actions">
+              <button type="button" class="btn btn-ghost">Cancelar</button>
+              <button type="button" class="btn btn-primary">Pagar ahora <span class="icon" data-icon="arrow-right"></span></button>
+            </div>
+          </form>
+        </section>
+
+        <div class="guide-pair">
+          <div class="guide-column">
+            <section class="guide-section">
+              <h2>Tarjeta</h2>
+              <div class="card card-body guide-card">
+                <strong>KLR-892</strong>
+                <span>Mazda CX-30</span>
+                <span>Modelo 2022</span>
+              </div>
+            </section>
+            <section class="guide-section">
+              <h2>Casilla de selección</h2>
+              <label class="checkbox"><input type="checkbox" checked> Recordarme</label>
+            </section>
+            <section class="guide-section">
+              <h2>Chip de usuario</h2>
+              <span class="user-chip"><span class="avatar">AG</span>ana.gomez@gmail.com</span>
+            </section>
+          </div>
+
+          <section class="guide-section">
+            <h2>Menú de navegación</h2>
+            <nav class="card nav-menu" aria-label="Menú principal">
+              <p class="overline">Menú</p>
+              <p class="nav-menu-title">Panel principal</p>
+              <a class="nav-item" href="#"><span class="icon" data-icon="star"></span><span><strong>Resumen del vehículo</strong><span class="nav-desc">Visualiza el resumen de tu vehículo</span></span></a>
+              <a class="nav-item" href="#"><span class="icon" data-icon="star"></span><span><strong>Estado de las obligaciones</strong><span class="nav-desc">Consulta el estado de tus obligaciones</span></span></a>
+              <a class="nav-item" href="#"><span class="icon" data-icon="star"></span><span><strong>+ Información</strong><span class="nav-desc">Encuentra más información al respecto</span></span></a>
+              <button type="button" class="btn btn-primary btn-block btn-sm"><span class="icon" data-icon="logout"></span>Cerrar sesión</button>
+            </nav>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

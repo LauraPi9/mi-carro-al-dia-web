@@ -18,8 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (!passwordOk) {
       password.focus();
     } else {
-
-      MiCarro.toast("Inicio de sesión simulado (maqueta sin backend)");
+      window.location.href = "panel.html";
     }
   });
 

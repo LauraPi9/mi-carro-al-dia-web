@@ -56,8 +56,6 @@
   border: 1px solid var(--color-border);
 }
 
-.guide-spaced { margin-top: 16px; }
-
 .guide-card {
   display: grid;
   gap: 2px;

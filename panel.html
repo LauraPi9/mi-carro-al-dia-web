@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel principal · MiCarro al Día</title>
+  <meta name="description" content="Resumen del vehículo y estado de las obligaciones en MiCarro al Día.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="app-page">
+  <div class="app-shell">
+    <!-- Menú lateral -->
+    <aside class="sidebar">
+      <a class="brand-mini" href="panel.html">
+        <strong>MiCarro <span>al Día</span></strong>
+        <small>gestión de obligaciones</small>
+      </a>
+
+      <nav class="card nav-menu" aria-label="Menú principal">
+        <p class="overline">Menú</p>
+        <p class="nav-menu-title">Panel principal</p>
+        <hr class="nav-divider">
+        <a class="nav-item" href="#" data-toast="Resumen del vehículo disponible próximamente">
+          <span class="icon" data-icon="star"></span>
+          <span><strong>Resumen del vehículo</strong><span class="nav-desc">Visualiza el resumen de tu vehículo</span></span>
+        </a>
+        <a class="nav-item" href="#" data-toast="Estado de las obligaciones disponible próximamente">
+          <span class="icon" data-icon="star"></span>
+          <span><strong>Estado de las obligaciones</strong><span class="nav-desc">Consulta el estado de tus obligaciones</span></span>
+        </a>
+        <a class="nav-item" href="#" data-toast="Más información disponible próximamente">
+          <span class="icon" data-icon="star"></span>
+          <span><strong>+ Información</strong><span class="nav-desc">Encuentra más información al respecto</span></span>
+        </a>
+        <hr class="nav-divider">
+        <a class="btn btn-primary btn-block" href="index.html">
+          <span class="icon" data-icon="logout"></span>Cerrar sesión
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Contenido -->
+    <main class="app-main">
+      <header class="page-header">
+        <div>
+          <h1 class="title-1">Bienvenida, Ana</h1>
+          <p class="page-subtitle">Este es el resumen actualizado de tu estado vehicular</p>
+        </div>
+        <span class="user-chip"><span class="avatar">AG</span>ana.gomez@mail.com</span>
+      </header>
+
+      <section class="due-banner" aria-labelledby="due-title">
+        <span class="due-banner-icon"><span class="icon" data-icon="clock"></span></span>
+        <div class="due-banner-text">
+          <h2 id="due-title">Tienes dos (2) obligaciones próximas a vencer</h2>
+          <p>Evita recargos, inmovilizaciones y multas realizando tu pago a tiempo.</p>
+        </div>
+        <button type="button" class="btn btn-warning btn-sm" data-toast="Pago de obligaciones disponible próximamente">
+          Pagar ahora <span class="icon" data-icon="chevron-right"></span>
+        </button>
+      </section>
+
+      <div class="dashboard-grid">
+        <!-- Resumen del vehículo -->
+        <section class="card summary-card" aria-labelledby="vehicle-title">
+          <header class="summary-card-header">
+            <h2 id="vehicle-title">Resumen del vehículo</h2>
+            <span class="pill pill-blue">Principal</span>
+          </header>
+          <div class="summary-card-body vehicle-summary">
+            <div class="plate-lg" aria-label="Placa ABC 123, Bogotá D.C.">
+              <small>Colombia</small>
+              <strong>ABC 123</strong>
+              <small>Bogotá D.C.</small>
+            </div>
+            <div>
+              <p class="vehicle-name">Toyota 2019</p>
+              <p class="support">Corolla XEI 2.0L • Particular</p>
+            </div>
+          </div>
+          <footer class="summary-card-footer">
+            <span>Estado técnico al día</span>
+            <a class="link link-arrow" href="#" data-toast="Detalle del vehículo disponible próximamente">
+              Ver detalle <span class="icon" data-icon="chevron-right"></span>
+            </a>
+          </footer>
+        </section>
+
+        <!-- Estado de las obligaciones -->
+        <section class="card summary-card" aria-labelledby="obligations-title">
+          <header class="summary-card-header">
+            <h2 id="obligations-title">Estado de las obligaciones</h2>
+            <span class="support">Total: 3 registros</span>
+          </header>
+          <div class="summary-card-body">
+            <div class="status-chips">
+              <span class="status-chip status-chip--danger">1 vencido</span>
+              <span class="status-chip status-chip--warning">2 por vencer</span>
+            </div>
+            <p class="support">Revisión Técnico-Mecánica y SOAT requieren atención prioritaria.</p>
+          </div>
+          <footer class="summary-card-footer">
+            <span>Sincronizado hoy</span>
+            <a class="link link-arrow" href="#" data-toast="Gestión de obligaciones disponible próximamente">
+              Gestionar obligaciones <span class="icon" data-icon="chevron-right"></span>
+            </a>
+          </footer>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- Botón flotante de ayuda: sin acción por ahora; se conecta con el panel de preguntas frecuentes -->
+  <button type="button" class="fab-help" aria-label="Ayuda">
+    <span class="icon" data-icon="help"></span>
+  </button>
+
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

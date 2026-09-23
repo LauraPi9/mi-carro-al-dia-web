@@ -7,7 +7,8 @@ Abrir `index.html` con doble clic en cualquier navegador moderno (Chrome, Edge, 
 
 ## Pantallas
 
-1. **Inicio de sesión** (`index.html`) — correo y contraseña con validación, botón para mostrar/ocultar la contraseña, enlace "¿Olvidó su contraseña?" que abre el modal **Recuperar contraseña** y, al enviarlo, el **cuadro de notificación** de correo enviado.
+1. **Inicio de sesión** (`index.html`) — correo y contraseña con validación, botón para mostrar/ocultar la contraseña, enlace "¿Olvidó su contraseña?" que abre el modal **Recuperar contraseña** y, al enviarlo, el **cuadro de notificación** de correo enviado. Con un correo válido y cualquier contraseña entra al panel principal.
+2. **Panel principal** (`panel.html`) — menú lateral de navegación con "Cerrar sesión", saludo y chip de usuario, aviso de obligaciones próximas a vencer, las tarjetas **Resumen del vehículo** y **Estado de las obligaciones**, y el botón flotante de ayuda (sin acción).
 
 **Guía de componentes** (`componentes.html`): paleta de colores, tipografía y sábana de controles (botones, grupo de botones, notificaciones, breadcrumb, modal de pago, tarjeta, casilla, chip de usuario y menú de navegación). Sirve como referencia al construir las demás pantallas.
 
@@ -15,6 +16,7 @@ Abrir `index.html` con doble clic en cualquier navegador moderno (Chrome, Edge, 
 
 ```
 ├── index.html            # Inicio de sesión
+├── panel.html            # Panel principal
 ├── componentes.html      # Guía de componentes (sábana de controles)
 ├── css/
 │   ├── styles.css        # Tokens (colores, tipografía, radios) y todos los componentes

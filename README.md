@@ -12,6 +12,8 @@ Abrir `index.html` con doble clic en cualquier navegador moderno (Chrome, Edge, 
 3. **Resumen del vehículo** (`vehiculo.html`) — breadcrumb y datos del vehículo (placa, marca y modelo), listado de **próximas obligaciones a vencer** con casillas de selección, y el modal **Pagar obligación** con detalle de la obligación, del precio y medio de pago.
 4. **Estado de las obligaciones** (`obligaciones.html`) — breadcrumb y las tarjetas de **SOAT** y **Tecnicomecánica** con su píldora de estado ("Próxima a vencer" / "Al día"), datos de vigencia y entidad, y el enlace "Consultar sitio oficial".
 
+Las tres pantallas internas (`panel.html`, `vehiculo.html`, `obligaciones.html`) comparten el panel lateral **Preguntas frecuentes**, un `<dialog class="modal modal--drawer">` que se abre tanto desde el botón flotante de ayuda como desde el ítem "+ Información" del menú.
+
 **Guía de componentes** (`componentes.html`): paleta de colores, tipografía y sábana de controles (botones, grupo de botones, notificaciones, breadcrumb, modal de pago, tarjeta, casilla, chip de usuario y menú de navegación). Sirve como referencia al construir las demás pantallas.
 
 ## Estructura
@@ -34,5 +36,5 @@ Abrir `index.html` con doble clic en cualquier navegador moderno (Chrome, Edge, 
 ## Convenciones
 
 - **Colores y tipografía** se definen una sola vez como variables en `:root` de `css/styles.css` (`--color-navy`, `--color-blue`, `--color-green`, `--color-bg`…). La fuente es *Plus Jakarta Sans* (Google Fonts).
-- **Modales:** se escriben como `<dialog class="modal">` y se abren con `data-open-modal="id-del-dialog"`; cualquier botón con `data-close-modal` los cierra.
+- **Modales:** se escriben como `<dialog class="modal">` y se abren con `data-open-modal="id-del-dialog"`; cualquier botón con `data-close-modal` los cierra. La variante `modal--drawer` (+ `modal-box--drawer`) desliza el diálogo desde el borde derecho en vez de centrarlo.
 - **Acciones de maqueta:** los botones cuya pantalla aún no existe usan `data-toast="mensaje"` para mostrar un aviso temporal.

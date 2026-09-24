@@ -31,7 +31,7 @@
           <span class="icon" data-icon="star"></span>
           <span><strong>Estado de las obligaciones</strong><span class="nav-desc">Consulta el estado de tus obligaciones</span></span>
         </a>
-        <a class="nav-item" href="#" data-toast="Más información disponible próximamente">
+        <a class="nav-item" href="#" data-open-modal="faq-drawer">
           <span class="icon" data-icon="star"></span>
           <span><strong>+ Información</strong><span class="nav-desc">Encuentra más información al respecto</span></span>
         </a>
@@ -95,10 +95,46 @@
     </main>
   </div>
 
-  <!-- Botón flotante de ayuda: sin acción por ahora; se conecta con el panel de preguntas frecuentes -->
-  <button type="button" class="fab-help" aria-label="Ayuda">
+  <!-- Botón flotante de ayuda: abre el panel de preguntas frecuentes -->
+  <button type="button" class="fab-help" data-open-modal="faq-drawer" aria-label="Ayuda">
     <span class="icon" data-icon="help"></span>
   </button>
+
+  <!-- Panel lateral: Preguntas frecuentes -->
+  <dialog class="modal modal--drawer" id="faq-drawer" aria-labelledby="faq-title">
+    <div class="modal-box modal-box--drawer">
+      <button type="button" class="btn-close" data-close-modal aria-label="Cerrar">
+        <span class="icon" data-icon="x"></span>
+      </button>
+      <h2 class="faq-title" id="faq-title">Preguntas frecuentes</h2>
+      <p class="support faq-subtitle">Encuentra respuestas rápidas a las consultas más comunes sobre tu vehículo.</p>
+
+      <div class="faq-list">
+        <button type="button" class="faq-item" data-toast="Respuesta disponible próximamente">
+          ¿Dónde puedo encontrar mis documentos del vehículo? <span class="icon" data-icon="chevron-right"></span>
+        </button>
+        <button type="button" class="faq-item" data-toast="Respuesta disponible próximamente">
+          ¿Cómo puedo cambiar mi método de pago? <span class="icon" data-icon="chevron-right"></span>
+        </button>
+        <button type="button" class="faq-item" data-toast="Respuesta disponible próximamente">
+          ¿Cuáles son las fechas límite para mis obligaciones? <span class="icon" data-icon="chevron-right"></span>
+        </button>
+        <button type="button" class="faq-item" data-toast="Respuesta disponible próximamente">
+          ¿Cómo actualizo mis datos personales en la cuenta? <span class="icon" data-icon="chevron-right"></span>
+        </button>
+        <button type="button" class="faq-item" data-toast="Respuesta disponible próximamente">
+          ¿Cómo puedo contactar al equipo de soporte? <span class="icon" data-icon="chevron-right"></span>
+        </button>
+      </div>
+
+      <div class="faq-footer">
+        <button type="button" class="btn btn-primary" data-toast="Contacto con soporte disponible próximamente">
+          <span class="icon" data-icon="headset"></span>Contacta a soporte
+        </button>
+        <p class="support faq-footer-note">Tiempo promedio de respuesta: menos de 5 minutos</p>
+      </div>
+    </div>
+  </dialog>
 
   <script src="js/icons.js"></script>
   <script src="js/app.js"></script>

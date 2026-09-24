@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estado de las obligaciones · MiCarro al Día</title>
+  <meta name="description" content="Consulta el estado del SOAT y la revisión técnico-mecánica de tu vehículo en MiCarro al Día.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="app-page">
+  <div class="app-shell">
+    <!-- Menú lateral -->
+    <aside class="sidebar">
+      <a class="brand-mini" href="panel.html">
+        <strong>MiCarro <span>al Día</span></strong>
+        <small>gestión de obligaciones</small>
+      </a>
+
+      <nav class="card nav-menu" aria-label="Menú principal">
+        <p class="overline">Menú</p>
+        <p class="nav-menu-title">Panel principal</p>
+        <hr class="nav-divider">
+        <a class="nav-item" href="vehiculo.html">
+          <span class="icon" data-icon="star"></span>
+          <span><strong>Resumen del vehículo</strong><span class="nav-desc">Visualiza el resumen de tu vehículo</span></span>
+        </a>
+        <a class="nav-item" href="obligaciones.html" aria-current="page">
+          <span class="icon" data-icon="star"></span>
+          <span><strong>Estado de las obligaciones</strong><span class="nav-desc">Consulta el estado de tus obligaciones</span></span>
+        </a>
+        <a class="nav-item" href="#" data-toast="Más información disponible próximamente">
+          <span class="icon" data-icon="star"></span>
+          <span><strong>+ Información</strong><span class="nav-desc">Encuentra más información al respecto</span></span>
+        </a>
+        <hr class="nav-divider">
+        <a class="btn btn-primary btn-block" href="index.html">
+          <span class="icon" data-icon="logout"></span>Cerrar sesión
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Contenido -->
+    <main class="app-main">
+      <header class="page-header">
+        <div>
+          <ol class="breadcrumb">
+            <li><a href="panel.html">Panel principal</a></li>
+            <li aria-current="page">Estado de las obligaciones</li>
+          </ol>
+          <h1 class="title-1">Estado de las obligaciones</h1>
+        </div>
+        <span class="user-chip"><span class="avatar">AG</span>ana.gomez@mail.com</span>
+      </header>
+
+      <div class="dashboard-grid">
+        <!-- SOAT -->
+        <section class="card status-card" aria-labelledby="soat-title">
+          <div class="status-card-header">
+            <h2 id="soat-title">SOAT</h2>
+            <span class="pill pill-amber">Próxima a vencer</span>
+          </div>
+          <div class="status-detail">
+            <div class="status-detail-row"><span>Fecha límite de renovación:</span><b>20/10/2026</b></div>
+            <div class="status-detail-row"><span>Entidad emisora / Cobertura:</span><b>Seguros del Estado</b></div>
+            <div class="status-detail-row"><span>Registro oficial RUNT:</span><b>No. 28941098</b></div>
+          </div>
+          <footer class="status-card-footer">
+            <a class="link link-arrow" href="#" data-toast="Consulta en sitio oficial disponible próximamente">
+              Consultar sitio oficial <span class="icon" data-icon="chevron-right"></span>
+            </a>
+          </footer>
+        </section>
+
+        <!-- Tecnicomecánica -->
+        <section class="card status-card" aria-labelledby="tecno-title">
+          <div class="status-card-header">
+            <h2 id="tecno-title">Tecnicomecánica</h2>
+            <span class="pill pill-success">Al día</span>
+          </div>
+          <div class="status-detail">
+            <div class="status-detail-row"><span>Vigencia hasta:</span><b>08/08/2026</b></div>
+            <div class="status-detail-row"><span>Centro diagnóstico (CDA):</span><b>CDA Metropolitano S.A.</b></div>
+            <div class="status-detail-row"><span>Certificado No.:</span><b>CDA-90812-COL</b></div>
+          </div>
+          <footer class="status-card-footer">
+            <a class="link link-arrow" href="#" data-toast="Consulta en sitio oficial disponible próximamente">
+              Consultar sitio oficial <span class="icon" data-icon="chevron-right"></span>
+            </a>
+          </footer>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <!-- Botón flotante de ayuda: sin acción por ahora; se conecta con el panel de preguntas frecuentes -->
+  <button type="button" class="fab-help" aria-label="Ayuda">
+    <span class="icon" data-icon="help"></span>
+  </button>
+
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

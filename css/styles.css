@@ -956,6 +956,7 @@ select {
 
 /* Variantes de píldora */
 .pill-amber { background: var(--color-amber-soft); border-color: var(--color-amber-border); color: var(--color-amber-text); }
+.pill-success { background: var(--color-green-soft); border-color: #A7F3D0; color: #047857; }
 .pill-neutral { background: var(--color-field); border-color: var(--color-border); color: var(--color-muted); }
 .pill-flag { background: var(--color-plate); border-color: #EAB308; color: var(--color-navy); }
 
@@ -1052,6 +1053,44 @@ select {
   justify-content: space-between;
   gap: 16px;
   padding-top: 18px;
+  border-top: 1px solid var(--color-border);
+}
+
+/* =========================================================
+   Pantalla: Estado de las obligaciones
+   ========================================================= */
+.status-card { padding: 24px; }
+
+.status-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.status-card-header h2 { font-size: 18px; font-weight: 700; }
+
+.status-detail {
+  display: grid;
+  gap: 16px;
+  padding: 20px 0;
+}
+
+.status-detail-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--color-muted);
+}
+
+.status-detail-row b { color: var(--color-navy); font-weight: 700; text-align: right; }
+
+.status-card-footer {
+  padding-top: 16px;
   border-top: 1px solid var(--color-border);
 }
 

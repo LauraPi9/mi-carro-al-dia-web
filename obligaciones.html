@@ -36,9 +36,9 @@
           <span><strong>+ Información</strong><span class="nav-desc">Encuentra más información al respecto</span></span>
         </a>
         <hr class="nav-divider">
-        <a class="btn btn-primary btn-block" href="index.html">
+        <button type="button" class="btn btn-primary btn-block" data-open-modal="logout-modal">
           <span class="icon" data-icon="logout"></span>Cerrar sesión
-        </a>
+        </button>
       </nav>
     </aside>
 
@@ -132,6 +132,26 @@
           <span class="icon" data-icon="headset"></span>Contacta a soporte
         </button>
         <p class="support faq-footer-note">Tiempo promedio de respuesta: menos de 5 minutos</p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Modal: Confirmar cierre de sesión -->
+  <dialog class="modal modal--sm" id="logout-modal" aria-labelledby="logout-title">
+    <div class="modal-box modal-confirm">
+      <button type="button" class="btn-close" data-close-modal aria-label="Cerrar">
+        <span class="icon" data-icon="x"></span>
+      </button>
+      <span class="icon-badge icon-badge--amber icon-badge--lg">
+        <span class="icon" data-icon="logout"></span>
+      </span>
+      <h2 class="modal-title" id="logout-title">¿Cerrar sesión?</h2>
+      <p class="modal-text">Vas a salir de tu cuenta en MiCarro al Día. Deberás iniciar sesión de nuevo para consultar tus obligaciones.</p>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost" data-close-modal>Cancelar</button>
+        <a class="btn btn-primary" href="index.html">
+          <span class="icon" data-icon="logout"></span>Cerrar sesión
+        </a>
       </div>
     </div>
   </dialog>

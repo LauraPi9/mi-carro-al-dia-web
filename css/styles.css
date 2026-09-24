@@ -131,6 +131,7 @@ select {
 }
 
 .icon-badge--blue { background: var(--color-blue-soft); }
+.icon-badge--amber { background: var(--color-amber-soft); color: var(--color-amber-text); }
 .icon-badge--lg { width: 44px; height: 44px; border-radius: var(--radius-lg); }
 .icon-badge--lg .icon { width: 22px; height: 22px; }
 
@@ -597,6 +598,11 @@ select {
   font-size: 13px;
   color: var(--color-muted);
 }
+
+/* Modal de confirmación (icono + título + texto centrados) */
+.modal-confirm { display: grid; justify-items: center; text-align: center; }
+.modal-confirm .icon-badge { margin-bottom: 14px; }
+.modal-confirm .modal-actions { justify-content: center; width: 100%; }
 
 .modal-actions {
   display: flex;

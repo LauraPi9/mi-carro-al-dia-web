@@ -12,7 +12,7 @@ Abrir `index.html` con doble clic en cualquier navegador moderno (Chrome, Edge, 
 3. **Resumen del vehículo** (`vehiculo.html`) — breadcrumb y datos del vehículo (placa, marca y modelo), listado de **próximas obligaciones a vencer** con casillas de selección, y el modal **Pagar obligación** con detalle de la obligación, del precio y medio de pago.
 4. **Estado de las obligaciones** (`obligaciones.html`) — breadcrumb y las tarjetas de **SOAT** y **Tecnicomecánica** con su píldora de estado ("Próxima a vencer" / "Al día"), datos de vigencia y entidad, y el enlace "Consultar sitio oficial".
 
-Las tres pantallas internas (`panel.html`, `vehiculo.html`, `obligaciones.html`) comparten el panel lateral **Preguntas frecuentes**, un `<dialog class="modal modal--drawer">` que se abre tanto desde el botón flotante de ayuda como desde el ítem "+ Información" del menú.
+Las tres pantallas internas (`panel.html`, `vehiculo.html`, `obligaciones.html`) comparten el panel lateral **Preguntas frecuentes**, un `<dialog class="modal modal--drawer">` que se abre tanto desde el botón flotante de ayuda como desde el ítem "+ Información" del menú, y el modal de confirmación **¿Cerrar sesión?** que se abre al pulsar "Cerrar sesión" en el menú lateral antes de volver a `index.html`.
 
 **Guía de componentes** (`componentes.html`): paleta de colores, tipografía y sábana de controles (botones, grupo de botones, notificaciones, breadcrumb, modal de pago, tarjeta, casilla, chip de usuario y menú de navegación). Sirve como referencia al construir las demás pantallas.
 

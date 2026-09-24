@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resumen del vehículo · MiCarro al Día</title>
+  <meta name="description" content="Consulta los datos del vehículo y sus próximas obligaciones a vencer en MiCarro al Día.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="app-page">
+  <div class="app-shell">
+    <!-- Menú lateral -->
+    <aside class="sidebar">
+      <a class="brand-mini" href="panel.html">
+        <strong>MiCarro <span>al Día</span></strong>
+        <small>gestión de obligaciones</small>
+      </a>
+
+      <nav class="card nav-menu" aria-label="Menú principal">
+        <p class="overline">Menú</p>
+        <p class="nav-menu-title">Panel principal</p>
+        <hr class="nav-divider">
+        <a class="nav-item" href="vehiculo.html" aria-current="page">
+          <span class="icon" data-icon="star"></span>
+          <span><strong>Resumen del vehículo</strong><span class="nav-desc">Visualiza el resumen de tu vehículo</span></span>
+        </a>
+        <a class="nav-item" href="#" data-toast="Estado de las obligaciones disponible próximamente">
+          <span class="icon" data-icon="star"></span>
+          <span><strong>Estado de las obligaciones</strong><span class="nav-desc">Consulta el estado de tus obligaciones</span></span>
+        </a>
+        <a class="nav-item" href="#" data-toast="Más información disponible próximamente">
+          <span class="icon" data-icon="star"></span>
+          <span><strong>+ Información</strong><span class="nav-desc">Encuentra más información al respecto</span></span>
+        </a>
+        <hr class="nav-divider">
+        <a class="btn btn-primary btn-block" href="index.html">
+          <span class="icon" data-icon="logout"></span>Cerrar sesión
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Contenido -->
+    <main class="app-main">
+      <header class="page-header">
+        <div>
+          <ol class="breadcrumb">
+            <li><a href="panel.html">Panel principal</a></li>
+            <li aria-current="page">Resumen del vehículo</li>
+          </ol>
+          <h1 class="title-1">Resumen del vehículo</h1>
+        </div>
+        <span class="user-chip"><span class="avatar">AG</span>ana.gomez@mail.com</span>
+      </header>
+
+      <div class="vehicle-info-grid">
+        <section class="card vehicle-info-card">
+          <p class="overline">Placa</p>
+          <div class="vehicle-info-value">
+            <strong>ABC 123</strong>
+            <span class="pill pill-flag">COL</span>
+          </div>
+        </section>
+
+        <section class="card vehicle-info-card">
+          <p class="vehicle-brand">Toyota</p>
+          <p class="support">Corolla XEI 2.0L</p>
+          <p class="overline">Marca</p>
+        </section>
+
+        <section class="card vehicle-info-card">
+          <p class="overline">Modelo</p>
+          <div class="vehicle-info-value">
+            <strong>2019</strong>
+            <span class="pill pill-neutral">Particular</span>
+          </div>
+        </section>
+      </div>
+
+      <section class="card obligations-card" aria-labelledby="obligations-heading">
+        <div class="obligations-header">
+          <div>
+            <h2 id="obligations-heading">Próximas obligaciones a vencer</h2>
+            <p class="support">Selecciona las obligaciones vigentes para proceder al trámite o pago electrónico.</p>
+          </div>
+          <span class="status-chip status-chip--warning">2 por vencer</span>
+        </div>
+
+        <div class="obligation-list">
+          <label class="obligation-row">
+            <input type="checkbox" checked aria-label="Seleccionar Tecnomecánica">
+            <div class="obligation-main">
+              <div class="obligation-name-row">
+                <strong>TECNOMECÁNICA</strong>
+                <span class="dot">•</span>
+                <span class="pill pill-amber">20/10/2026</span>
+              </div>
+              <p class="support obligation-desc">Certificado de revisión técnico-mecánica y emisiones contaminantes.</p>
+            </div>
+            <div class="obligation-side">
+              <span class="support">Vigente en RUNT</span>
+            </div>
+          </label>
+
+          <label class="obligation-row">
+            <input type="checkbox" checked aria-label="Seleccionar SOAT">
+            <div class="obligation-main">
+              <div class="obligation-name-row">
+                <strong>SOAT</strong>
+                <span class="dot">•</span>
+                <span class="pill pill-neutral">08/09/2026</span>
+              </div>
+              <p class="support obligation-desc">Seguro Obligatorio de Accidentes de Tránsito reglamentario.</p>
+            </div>
+            <div class="obligation-side">
+              <strong>$204.000</strong>
+              <span class="support">Tarifa regulada</span>
+            </div>
+          </label>
+        </div>
+
+        <div class="obligations-footer">
+          <p class="support">Pagos procesados y conciliados directamente ante entidades autorizadas.</p>
+          <button type="button" class="btn btn-primary" data-open-modal="pay-modal">
+            Pagar obligación <span class="icon" data-icon="chevron-right"></span>
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modal: Pagar obligación -->
+  <dialog class="modal" id="pay-modal" aria-labelledby="pay-modal-title">
+    <form class="modal-box" novalidate>
+      <button type="button" class="btn-close" data-close-modal aria-label="Cerrar">
+        <span class="icon" data-icon="x"></span>
+      </button>
+      <h3 class="modal-title modal-title--left" id="pay-modal-title">Pagar obligación</h3>
+
+      <div class="detail-block">
+        <p class="overline">Detalle de la obligación</p>
+        <div class="detail-row">Tipo de obligación <b>SOAT</b></div>
+        <div class="detail-row">Fecha de vencimiento <b>08/09/2026</b></div>
+        <div class="detail-row">Placa del vehículo <span class="plate">ABC·123</span></div>
+      </div>
+      <div class="detail-block">
+        <p class="overline">Detalle del precio</p>
+        <div class="detail-row">Valor base <b>$204.000</b></div>
+        <div class="detail-total">Total a pagar <b>$204.000</b></div>
+      </div>
+
+      <div class="field detail-field">
+        <label class="field-label" for="pay-method">Medio de pago</label>
+        <div class="input-wrap input-wrap--outline">
+          <span class="pay-badge">PSE</span>
+          <select id="pay-method">
+            <option>PSE (Débito desde cuenta de ahorros)</option>
+            <option>Tarjeta de crédito</option>
+          </select>
+          <span class="icon" data-icon="chevron-down"></span>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost" data-close-modal>Cancelar</button>
+        <button type="button" class="btn btn-primary" data-close-modal>
+          Pagar ahora <span class="icon" data-icon="arrow-right"></span>
+        </button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- Botón flotante de ayuda: sin acción por ahora; se conecta con el panel de preguntas frecuentes -->
+  <button type="button" class="fab-help" aria-label="Ayuda">
+    <span class="icon" data-icon="help"></span>
+  </button>
+
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

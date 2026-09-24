@@ -951,6 +951,110 @@ select {
   gap: 8px;
 }
 
+.nav-item[aria-current="page"] .icon { color: var(--color-blue); }
+.nav-item[aria-current="page"] strong { color: var(--color-blue); }
+
+/* Variantes de píldora */
+.pill-amber { background: var(--color-amber-soft); border-color: var(--color-amber-border); color: var(--color-amber-text); }
+.pill-neutral { background: var(--color-field); border-color: var(--color-border); color: var(--color-muted); }
+.pill-flag { background: var(--color-plate); border-color: #EAB308; color: var(--color-navy); }
+
+/* =========================================================
+   Pantalla: Resumen del vehículo
+   ========================================================= */
+.vehicle-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.vehicle-info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  padding: 18px 20px;
+}
+
+.vehicle-info-value {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.vehicle-info-value strong { font-size: 20px; font-weight: 800; }
+.vehicle-brand { font-size: 20px; font-weight: 800; }
+
+.obligations-card { padding: 24px; }
+
+.obligations-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.obligations-header h2 { font-size: 16px; font-weight: 700; }
+.obligations-header p { margin-top: 4px; }
+.obligations-header .status-chip { flex-shrink: 0; }
+
+.obligation-list {
+  display: grid;
+  gap: 12px;
+  padding: 18px 0;
+}
+
+.obligation-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+}
+
+.obligation-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--color-navy);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.obligation-main { flex: 1; min-width: 0; }
+
+.obligation-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.obligation-name-row strong { font-size: 14px; font-weight: 700; }
+.obligation-name-row .dot { color: var(--color-subtle); }
+
+.obligation-desc { margin-top: 4px; }
+
+.obligation-side { flex-shrink: 0; align-self: center; text-align: right; }
+.obligation-side strong { display: block; font-size: 16px; font-weight: 700; }
+.obligation-side .support { display: block; margin-top: 2px; }
+
+.obligations-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-border);
+}
+
 @media (max-width: 900px) {
   .app-shell {
     grid-template-columns: minmax(0, 1fr);
@@ -967,10 +1071,16 @@ select {
   .sidebar .nav-item { padding: 8px; }
   .app-main { padding: 24px 16px; }
   .dashboard-grid { grid-template-columns: minmax(0, 1fr); }
+  .vehicle-info-grid { grid-template-columns: minmax(0, 1fr); }
 }
 
 @media (max-width: 600px) {
   .page-header { flex-direction: column; }
   .due-banner { flex-wrap: wrap; }
   .due-banner .btn { width: 100%; }
+  .obligations-header { flex-direction: column; }
+  .obligation-row { flex-wrap: wrap; }
+  .obligation-side { align-self: flex-start; margin-left: 32px; text-align: left; }
+  .obligations-footer { flex-direction: column; align-items: stretch; text-align: center; }
+  .obligations-footer .btn { width: 100%; }
 }
